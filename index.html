@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Loqman Hemici · LoqaVision</title>
+<meta name="description" content="Loqman Hemici — Brand identity & social media designer. لقمان حميسي — مصمم هوية بصرية وسوشيال ميديا.">
+<meta property="og:title" content="Loqman Hemici · LoqaVision">
+<meta property="og:description" content="Brand identity & social media designer — 5 years, clients in KSA, Algeria and Qatar.">
+<meta property="og:image" content="assets/img/citybox-1.webp">
+<link rel="icon" href="assets/img/avatar.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1C35F0; --navy:#0B1440; --lime:#D6FF3D; --off:#F5F7FF; --white:#FFFFFF;
+  --mut:#545F82; --line:#DCE1F5;
+  --ar:'Alexandria','IBM Plex Sans Arabic',system-ui,sans-serif;
+  --body:'IBM Plex Sans Arabic','Manrope',system-ui,sans-serif;
+  --en:'Manrope','IBM Plex Sans Arabic',system-ui,sans-serif;
+  --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--white);color:var(--navy);font-family:var(--body);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+html[lang="en"] body{font-family:var(--en)}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(var(--wrap),100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--ar);line-height:1.25;margin:0}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3{font-family:var(--en)}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:6px}
+
+/* frame signature */
+.vf{position:relative;display:inline-block;padding:.05em .28em}
+.vf::before,.vf::after,.vf>i::before,.vf>i::after{content:"";position:absolute;width:.32em;height:.32em;border:.07em solid var(--lime)}
+.vf::before{top:0;inset-inline-start:0;border-inline-end:0;border-bottom:0}
+.vf::after{top:0;inset-inline-end:0;border-inline-start:0;border-bottom:0}
+.vf>i::before{bottom:0;inset-inline-start:0;border-inline-end:0;border-top:0}
+.vf>i::after{bottom:0;inset-inline-end:0;border-inline-start:0;border-top:0}
+.vf.blue::before,.vf.blue::after,.vf.blue>i::before,.vf.blue>i::after{border-color:var(--blue)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:20;padding-top:env(safe-area-inset-top,0px);transition:background .25s}
+.nav.solid{background:rgba(11,20,64,.86);backdrop-filter:blur(12px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-family:var(--en);font-weight:800;font-size:18px}
+.brand img{width:36px;height:36px;border-radius:50%;border:2px solid var(--lime)}
+.brand b{color:var(--lime)}
+.links{display:flex;gap:26px;align-items:center}
+.links a{color:#DDE3FF;text-decoration:none;font-weight:600;font-size:15px}
+.links a:hover{color:#fff}
+.lang{border:1.5px solid var(--lime);background:transparent;color:#fff;border-radius:999px;padding:6px 16px;font-family:var(--en);font-weight:700;cursor:pointer}
+@media (max-width:760px){.links a{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;padding:150px 0 120px;
+  background:radial-gradient(circle at 70% 30%,#6F87FF 0,transparent 55%),linear-gradient(180deg,#1C35F0 0%,#1529C2 60%,#0B1440 100%)}
+html[dir="ltr"] .hero{background:radial-gradient(circle at 30% 30%,#6F87FF 0,transparent 55%),linear-gradient(180deg,#1C35F0 0%,#1529C2 60%,#0B1440 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(180deg,#000 40%,transparent)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.word{font-family:var(--en);font-weight:800;font-size:clamp(56px,10vw,128px);line-height:1;letter-spacing:-.02em;direction:ltr;text-align:start;margin-bottom:28px}
+html[dir="rtl"] .word{text-align:right}
+.word .vf{color:var(--lime)}
+.hero h1{font-size:clamp(26px,3.4vw,40px);font-weight:800}
+.hero p.lead{color:#DDE3FF;font-size:clamp(17px,1.6vw,20px);max-width:56ch;margin:18px 0 32px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid transparent}
+.btn.primary{background:var(--lime);color:var(--navy)}
+.btn.ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn.ghost:hover{border-color:#fff}
+.avatar{justify-self:center;position:relative;width:min(340px,80vw);aspect-ratio:1}
+.avatar img{width:100%;height:100%;object-fit:cover;border-radius:44px;border:6px solid var(--lime);box-shadow:0 40px 80px rgba(6,10,40,.45)}
+.avatar .tag{position:absolute;inset-block-end:-18px;inset-inline-start:-18px;background:#fff;color:var(--navy);border-radius:18px;padding:10px 16px;font-weight:700;font-size:14px;box-shadow:0 16px 40px rgba(6,10,40,.3)}
+.avatar .tag span{color:var(--blue);font-family:var(--en);font-weight:800}
+.facts{display:flex;flex-wrap:wrap;gap:36px;margin-top:56px;padding-top:28px;border-top:1px solid rgba(255,255,255,.2)}
+.facts div{font-size:15px;color:#DDE3FF}
+.facts b{display:block;font-family:var(--en);font-size:40px;line-height:1.1;color:#fff}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.avatar{order:-1;width:200px}}
+
+/* sections */
+section{padding:110px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(32px,4.4vw,52px);font-weight:800}
+.head p{color:var(--mut);max-width:48ch;margin:10px 0 0}
+
+/* filters */
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{border:1.5px solid var(--line);background:#fff;color:var(--navy);border-radius:999px;padding:8px 18px;font:inherit;font-weight:600;font-size:15px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* work grid */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+@media (max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+.card{all:unset;cursor:pointer;display:block;border-radius:24px;overflow:hidden;background:var(--off);position:relative}
+.card .img{aspect-ratio:3/4;overflow:hidden}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card:hover img{transform:scale(1.04)}
+.card .meta{padding:18px 22px 22px}
+.card h3{font-size:22px;font-weight:800}
+.card .type{color:var(--blue);font-weight:600;font-size:15px}
+.card .count{position:absolute;top:14px;inset-inline-end:14px;background:var(--navy);color:#fff;font-family:var(--en);font-weight:700;font-size:13px;padding:5px 12px;border-radius:999px}
+.card:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.card[hidden]{display:none}
+
+/* services */
+.services{background:var(--off)}
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:2px solid var(--navy)}
+.svc div{padding:30px 0;border-bottom:1px solid var(--line)}
+.svc div:nth-child(odd){padding-inline-end:40px}
+.svc div:nth-child(even){padding-inline-start:40px;border-inline-start:1px solid var(--line)}
+.svc h3{font-size:24px;font-weight:800;margin-bottom:6px}
+.svc p{margin:0;color:var(--mut)}
+@media (max-width:700px){.svc{grid-template-columns:1fr}.svc div:nth-child(n){padding-inline:0;border-inline-start:0}}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+@media (max-width:860px){.about .wrap{grid-template-columns:1fr}}
+.about p.bio{font-size:19px;margin:0 0 20px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 28px}
+.chips span{border-radius:12px;padding:8px 16px;font-family:var(--en);font-weight:700;font-size:15px;background:var(--navy);color:#fff}
+.chips.ai span{background:var(--lime);color:var(--navy)}
+.about h3{font-size:18px;color:var(--blue);font-weight:700}
+.langs div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}
+.langs span{color:var(--mut)}
+.clients{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.clients span{border:1.5px solid var(--blue);border-radius:999px;padding:6px 16px;font-weight:600}
+
+/* contact */
+.contact{background:linear-gradient(180deg,#1C35F0,#0B1440);color:#fff;text-align:center}
+.contact h2{font-size:clamp(34px,5vw,64px);font-weight:800}
+.contact h2 .vf{color:var(--lime)}
+.contact p{color:#DDE3FF;margin:16px auto 36px;max-width:52ch}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px;text-align:start}
+@media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.cards{grid-template-columns:1fr}}
+.cards a{display:block;text-decoration:none;padding:20px 22px;border-radius:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)}
+.cards a:hover{background:rgba(255,255,255,.14)}
+.cards small{display:block;color:var(--lime);font-family:var(--en);font-weight:700;font-size:13px}
+.cards strong{font-family:var(--en);font-size:17px;word-break:break-all;direction:ltr;unicode-bidi:isolate}
+footer{background:#0B1440;color:#9AA6D8;text-align:center;padding:28px 20px calc(28px + env(safe-area-inset-bottom,0px));font-size:14px;border-top:1px solid rgba(255,255,255,.08)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(6,10,40,.94);display:none;flex-direction:column}
+.lb.open{display:flex}
+.lb header{display:flex;justify-content:space-between;align-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) 24px 16px;color:#fff;gap:16px}
+.lb header h3{font-size:20px}
+.lb header p{margin:0;color:#B8C2F0;font-size:15px}
+.lb .x{background:var(--lime);color:var(--navy);border:0;border-radius:999px;width:44px;height:44px;font-size:22px;font-weight:800;cursor:pointer;flex:none}
+.lb .strip{flex:1;display:flex;gap:20px;overflow-x:auto;padding:8px 24px calc(28px + env(safe-area-inset-bottom,0px));scroll-snap-type:x mandatory;align-items:center}
+.lb .strip img{height:min(78vh,900px);width:auto;max-width:88vw;object-fit:contain;border-radius:16px;scroll-snap-align:center;flex:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/img/avatar.webp" alt="">Loqa<b>Vision</b></a>
+    <div class="links">
+      <a href="#work" data-t="navWork"></a>
+      <a href="#services" data-t="navSvc"></a>
+      <a href="#about" data-t="navAbout"></a>
+      <a href="#contact" data-t="navContact"></a>
+      <button class="lang" id="lang" type="button">EN</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="word" aria-label="LoqaVision">Loqa<span class="vf">Vision<i></i></span></div>
+      <h1 data-t="heroTitle"></h1>
+      <p class="lead" data-t="heroLead"></p>
+      <div class="cta">
+        <a class="btn primary" href="https://wa.me/213659429551" target="_blank" rel="noopener" data-t="ctaWa"></a>
+        <a class="btn ghost" href="#work" data-t="ctaWork"></a>
+      </div>
+      <div class="facts">
+        <div><b>5</b><span data-t="f1"></span></div>
+        <div><b>20+</b><span data-t="f2"></span></div>
+        <div><b>3</b><span data-t="f3"></span></div>
+      </div>
+    </div>
+    <div class="avatar">
+      <img src="assets/img/avatar.webp" alt="Loqman Hemici" width="520" height="520">
+      <div class="tag"><span>Loqman Hemici</span><br><span data-t="tagRole" style="color:var(--mut);font-family:inherit;font-weight:600"></span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="work">
+  <div class="wrap">
+    <div class="head">
+      <div><h2 data-t="workH"></h2><p data-t="workP"></p></div>
+      <div class="filters" role="group" id="filters"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="head"><div><h2 data-t="svcH"></h2><p data-t="svcP"></p></div></div>
+    <div class="svc" id="svc"></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <div class="head" style="margin-bottom:24px"><h2 data-t="aboutH"></h2></div>
+      <p class="bio" data-t="bio1"></p>
+      <p class="bio" data-t="bio2" style="color:var(--mut);font-size:17px"></p>
+      <h3 data-t="clientsH" style="margin-top:32px"></h3>
+      <div class="clients" id="clients"></div>
+    </div>
+    <div>
+      <h3 data-t="toolsH"></h3>
+      <div class="chips"><span>Photoshop</span><span>Illustrator</span><span>Canva</span><span>CapCut</span></div>
+      <h3 data-t="aiH"></h3>
+      <div class="chips ai"><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Midjourney</span><span>Kling</span></div>
+      <h3 data-t="langH"></h3>
+      <div class="langs" id="langs"></div>
+      <h3 data-t="eduH" style="margin-top:28px"></h3>
+      <p style="margin:6px 0 0"><strong data-t="edu1"></strong><br><span style="color:var(--mut)" data-t="edu2"></span></p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2><span data-t="cH1"></span><br><span class="vf" data-t="cH2"></span></h2>
+    <p data-t="cP"></p>
+    <a class="btn primary" href="https://wa.me/213659429551" target="_blank" rel="noopener" data-t="ctaWa"></a>
+    <div class="cards">
+      <a href="https://wa.me/213659429551" target="_blank" rel="noopener"><small>WhatsApp</small><strong>+213 659 42 95 51</strong></a>
+      <a href="mailto:loqmanhemici@gmail.com"><small>Email</small><strong>loqmanhemici@gmail.com</strong></a>
+      <a href="https://www.instagram.com/loqman_hemici" target="_blank" rel="noopener"><small>Instagram</small><strong>@loqman_hemici</strong></a>
+      <a href="https://www.behance.net/lokahmi" target="_blank" rel="noopener"><small>Behance</small><strong>behance.net/lokahmi</strong></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><span data-t="foot"></span> © <span id="yr"></span> Loqman Hemici · LoqaVision</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-labelledby="lbT">
+  <header><div><h3 id="lbT"></h3><p id="lbP"></p></div><button class="x" id="lbX" type="button" aria-label="Close">×</button></header>
+  <div class="strip" id="lbS"></div>
+</div>
+
+<script>
+const T={
+ ar:{navWork:'الأعمال',navSvc:'الخدمات',navAbout:'عني',navContact:'تواصل',
+  heroTitle:'لقمان حميسي، مصمم هوية بصرية وسوشيال ميديا',
+  heroLead:'أبني لعلامات تجارية في السعودية والجزائر وقطر أنظمة بصرية متكاملة: من الشعار إلى محتوى السوشيال ميديا والحملات والموشن، بهدف واحد: أن تُعرف علامتك من أول نظرة وتجيب عملاء.',
+  ctaWa:'راسلني على واتساب',ctaWork:'شوف الأعمال',f1:'سنوات خبرة',f2:'مشروع منشور',f3:'دول: السعودية، الجزائر، قطر',tagRole:'مصمم هوية وسوشيال ميديا',
+  workH:'أعمال مختارة',workP:'اضغط على أي مشروع لتشوف التصاميم كاملة.',all:'الكل',social:'سوشيال ميديا',motion:'موشن وعروض',
+  svcH:'الخدمات',svcP:'كل خدمة مبنية على نفس الفكرة: تصميم يخدم هدف واضح.',
+  aboutH:'عني',bio1:'مصمم هوية بصرية وسوشيال ميديا بخبرة 5 سنوات، أشتغل باسم LoqaVision مع علامات في السعودية والجزائر وقطر.',
+  bio2:'أصمم أنظمة بصرية كاملة، مو بوستات متفرقة: ألوان وخطوط وقوالب ثابتة تخلي حساب العلامة يبان متناسق ويبني ثقة مع كل منشور. وأستخدم أدوات الذكاء الاصطناعي لتسريع الإنتاج وتوليد صور المنتجات.',
+  clientsH:'عملاء ومشاريع',toolsH:'البرامج',aiH:'أدوات الذكاء الاصطناعي',langH:'اللغات',eduH:'التعليم',edu1:'ليسانس كهروتقني',edu2:'جامعة، الهندسة الكهربائية، 2021–2024',
+  cH1:'تبي تصاميم',cH2:'تجيب لك عملاء؟',cP:'احكي لي عن مشروعك، وأرجع لك بفكرة واضحة وعرض سعر.',foot:'صُمم بهوية LoqaVision',
+  langs:[['العربية','اللغة الأم'],['الإنجليزية','جيد'],['الفرنسية','جيد']]},
+ en:{navWork:'Work',navSvc:'Services',navAbout:'About',navContact:'Contact',
+  heroTitle:'Loqman Hemici, brand identity & social media designer',
+  heroLead:'I build complete visual systems for brands in Saudi Arabia, Algeria and Qatar: from logos to social content, launch campaigns and motion, with one goal: make your brand recognizable at first glance and bring you customers.',
+  ctaWa:'Message me on WhatsApp',ctaWork:'See the work',f1:'years of experience',f2:'published projects',f3:'countries: KSA, Algeria, Qatar',tagRole:'Brand & social designer',
+  workH:'Selected work',workP:'Tap any project to see the full set of designs.',all:'All',social:'Social media',motion:'Motion & decks',
+  svcH:'Services',svcP:'Every service starts from the same idea: design with a clear job to do.',
+  aboutH:'About',bio1:'Brand identity and social media designer with 5 years of experience, working as LoqaVision with brands in Saudi Arabia, Algeria and Qatar.',
+  bio2:'I design complete visual systems, not one-off posts: consistent colors, type and templates that make a brand’s account look coherent and build trust with every post. I use AI tools to speed up production and generate product imagery.',
+  clientsH:'Clients & projects',toolsH:'Software',aiH:'AI tools',langH:'Languages',eduH:'Education',edu1:'Bachelor’s in Electrotechnics',edu2:'University, Electrical Engineering, 2021–2024',
+  cH1:'Want designs that',cH2:'bring customers?',cP:'Tell me about your project and I’ll come back with a clear idea and a quote.',foot:'Designed in the LoqaVision identity',
+  langs:[['Arabic','Native'],['English','Good'],['French','Good']]}
+};
+const P=[
+ {id:'citybox',cat:'social',ar:['CityBox','سوشيال ميديا لخزائن ذكية لاستلام الطرود، الجزائر'],en:['CityBox','Social media for smart parcel lockers, Algeria'],imgs:['citybox-1','citybox-2','citybox-3','citybox-4']},
+ {id:'fastaqa',cat:'social',ar:['فستقة','سوشيال ميديا لعلامة كريمة الفستق'],en:['Fastaqa','Social media for a pistachio spread brand'],imgs:['fastaqa-1','fastaqa-2','fastaqa-3','fastaqa-4']},
+ {id:'zesta',cat:'social',ar:['ZESTA Peach','سوشيال ميديا لمشروب خوخ منعش'],en:['ZESTA Peach','Social media for a peach soft drink'],imgs:['zesta-1','zesta-2','zesta-3']},
+ {id:'rawaa',cat:'social',ar:['عيادة رواء','سوشيال ميديا لعيادة تجميل وجلدية'],en:['Rawaa Clinic','Social media for a dermatology & aesthetics clinic'],imgs:['rawaa-1']},
+ {id:'epsos',cat:'social',ar:['معهد ابسوس','إعلانات وإطلاق تطبيق لمعهد تحضير البسيخومتري'],en:['EPSOS Institute','Campaigns and an app launch for a psychometric prep institute'],imgs:['epsos-1','epsos-2','epsos-3','epsos-4']},
+ {id:'qt',cat:'social',ar:['Quality Time','محتوى أسبوعي لسبا رجالي، الأحساء'],en:['Quality Time','Weekly content for a men’s spa, Al-Ahsa'],imgs:['qt-1']},
+ {id:'outing',cat:'motion',ar:['OUTING','فيديو موشن تعريفي لخدمة جلسات خارجية، الدوحة'],en:['OUTING','Explainer motion video for an outdoor seating service, Doha'],imgs:['outing-1','outing-2','outing-3']},
+ {id:'qtm',cat:'motion',ar:['Quality Time Motion','ريلز موشن 2D فلات لسبا رجالي'],en:['Quality Time Motion','2D flat motion Reel for a men’s spa'],imgs:['qtm-1','qtm-2','qtm-3']}
+];
+const SVC={ar:[['الهوية البصرية والشعارات','شعار، ألوان، خطوط، ودليل استخدام يخلي علامتك ثابتة في كل مكان.'],['أنظمة السوشيال ميديا','قوالب وشبكة إنستغرام متناسقة، وبوستات وستوريات وكاروسيل جاهزة للنشر.'],['الحملات والإطلاق','حملات منتجات وعروض وإطلاقات بتسلسل يشد الانتباه ويوصل للبيع.'],['موشن وعروض تقديمية','ريلز موشن 2D وفيديوهات تعريفية وعروض تقديمية للمستثمرين والعملاء.']],
+ en:[['Visual identity & logos','Logo, colors, type and usage rules that keep your brand consistent everywhere.'],['Social media systems','Templates and a coherent Instagram grid: posts, stories and carousels ready to publish.'],['Campaigns & launches','Product campaigns, offers and launches sequenced to grab attention and drive sales.'],['Motion & presentations','2D motion Reels, explainer videos, and decks for investors and clients.']]};
+const CL={ar:['فستقة','ZESTA','CityBox','OUTING','سُدرة للعطور','شارع سبعة','Quality Time','معهد ابسوس','مطعم لقمة','عيادة رواء'],en:['Fastaqa','ZESTA','CityBox','OUTING','Sudra Perfumes','Street 7','Quality Time','EPSOS Institute','Laqma Restaurant','Rawaa Clinic']};
+let L='ar', F='all';
+try{const s=localStorage.getItem('lv-lang'); if(s==='en'||s==='ar') L=s}catch(e){}
+const $=s=>document.querySelector(s);
+function render(){
+  const t=T[L]; document.documentElement.lang=L; document.documentElement.dir=L==='ar'?'rtl':'ltr';
+  document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t; if(t[k]!==undefined){ if(el.classList.contains('vf')) el.innerHTML=t[k]+'<i></i>'; else el.textContent=t[k]; }});
+  $('#lang').textContent=L==='ar'?'EN':'عربي';
+  $('#filters').innerHTML=['all','social','motion'].map(k=>`<button type="button" data-f="${k}" aria-pressed="${F===k}">${t[k]}</button>`).join('');
+  $('#grid').innerHTML=P.map(p=>`<button class="card" type="button" data-id="${p.id}" ${F!=='all'&&p.cat!==F?'hidden':''}><div class="img"><img src="assets/img/${p.imgs[0]}.webp" alt="${p[L][0]}" loading="lazy" width="900" height="1200"></div>${p.imgs.length>1?`<span class="count">${p.imgs.length}</span>`:''}<div class="meta"><h3>${p[L][0]}</h3><div class="type">${p[L][1]}</div></div></button>`).join('');
+  $('#svc').innerHTML=SVC[L].map(s=>`<div><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
+  $('#clients').innerHTML=CL[L].map(c=>`<span>${c}</span>`).join('');
+  $('#langs').innerHTML=t.langs.map(l=>`<div><strong>${l[0]}</strong><span>${l[1]}</span></div>`).join('');
+}
+$('#lang').addEventListener('click',()=>{L=L==='ar'?'en':'ar'; try{localStorage.setItem('lv-lang',L)}catch(e){} render();});
+$('#filters').addEventListener('click',e=>{const b=e.target.closest('button'); if(!b) return; F=b.dataset.f; render();});
+let last=null;
+$('#grid').addEventListener('click',e=>{const c=e.target.closest('.card'); if(!c) return; last=c; const p=P.find(x=>x.id===c.dataset.id);
+  $('#lbT').textContent=p[L][0]; $('#lbP').textContent=p[L][1];
+  $('#lbS').innerHTML=p.imgs.map(i=>`<img src="assets/img/${i}.webp" alt="${p[L][0]}">`).join('');
+  $('#lb').classList.add('open'); document.body.style.overflow='hidden'; $('#lbX').focus();});
+function closeLb(){ $('#lb').classList.remove('open'); document.body.style.overflow=''; if(last) last.focus(); }
+$('#lbX').addEventListener('click',closeLb);
+$('#lb').addEventListener('click',e=>{ if(e.target.id==='lb') closeLb(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape' && $('#lb').classList.contains('open')) closeLb(); });
+addEventListener('scroll',()=>$('#nav').classList.toggle('solid',scrollY>40),{passive:true});
+$('#yr').textContent=new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
