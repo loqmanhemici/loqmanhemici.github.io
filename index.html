@@ -44,6 +44,7 @@ html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3{font-family:var(--en)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-family:var(--en);font-weight:800;font-size:18px}
 .brand img{width:36px;height:36px;border-radius:50%;border:2px solid var(--lime)}
 .brand b{color:var(--lime)}
+.brand .bw{direction:ltr;unicode-bidi:isolate;white-space:nowrap}
 .links{display:flex;gap:24px;align-items:center}
 .links a{color:#DDE3FF;text-decoration:none;font-weight:600;font-size:15px}
 .links a:hover{color:#fff}
@@ -180,7 +181,7 @@ footer{background:var(--navy);color:#9AA6D8;text-align:center;padding:28px 20px 
 </head>
 <body>
 <nav class="nav" id="nav"><div class="wrap">
-  <a class="brand" href="#top"><img src="avatar.webp" alt="">Loqa<b>Vision</b></a>
+  <a class="brand" href="#top" dir="ltr"><img src="avatar.webp" alt=""><span class="bw">Loqa<b>Vision</b></span></a>
   <div class="links">
     <a href="#motion" data-t="nMotion"></a><a href="#work" data-t="nWork"></a><a href="#services" data-t="nSvc"></a><a href="#about" data-t="nAbout"></a><a href="#contact" data-t="nContact"></a>
     <button class="lang" id="lang" type="button">EN</button>
