@@ -9,13 +9,13 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="لقمان حميسي · مصمم هوية وسوشيال ميديا وموشن">
 <meta property="og:description" content="هوية بصرية · سوشيال ميديا · تصاميم إعلانية · موشن. احكِ لي عن مشروعك.">
-<meta property="og:image" content="https://loqmanhemici.github.io/assets/og.jpg">
+<meta property="og:image" content="https://loqmanhemici.github.io/og.jpg">
 <meta property="og:url" content="https://loqmanhemici.github.io/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/loqman.webp">
+<link rel="preload" as="image" href="loqman.webp">
 <style>
 :root{
   --blue:#1C35F0; --navy:#0B1440; --off:#F5F7FF; --lime:#D6FF3D; --white:#fff;
@@ -438,7 +438,7 @@ footer .logo{font-size:18px}
     <div class="stage" id="stage">
       <div class="ring"></div>
       <div class="halo"></div>
-      <img class="me" src="assets/loqman.webp" alt="لقمان حميسي" width="900" height="900" fetchpriority="high">
+      <img class="me" src="loqman.webp" alt="لقمان حميسي" width="900" height="900" fetchpriority="high">
       <div class="fl f1" data-depth="28"><div class="tile" title="Brand"><svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div></div>
       <div class="fl f2" data-depth="18"><div class="tile lime" title="Color"><svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="1.2"/><circle cx="17.5" cy="10.5" r="1.2"/><circle cx="8.5" cy="7.5" r="1.2"/><circle cx="6.5" cy="12.5" r="1.2"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.84-.44-1.13-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.56-2.5 5.56-5.55C21.96 6.01 17.46 2 12 2z"/></svg></div></div>
       <div class="fl f3 chip" data-depth="36"><div class="tile"><svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></svg><span data-i="fl.motion">موشن</span></div></div>
@@ -541,7 +541,7 @@ footer .logo{font-size:18px}
   <div class="blob b3"></div><div class="blob b4"></div>
   <div class="wrap about-in" style="position:relative">
     <div class="arch rv">
-      <img src="assets/loqman.webp" alt="لقمان حميسي" loading="lazy" width="900" height="900">
+      <img src="loqman.webp" alt="لقمان حميسي" loading="lazy" width="900" height="900">
       <div class="name-chip glass-d">
         <div><b data-i="ab.name">لقمان حميسي</b><span data-i="ab.loc">البيّض، الجزائر · أعمل عن بُعد</span></div>
         <span class="pin"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
@@ -559,8 +559,8 @@ footer .logo{font-size:18px}
         <div class="stat"><div class="v"><span class="cnt" id="cDes" data-to="0">0</span></div><div class="k" data-i="st.d">تصميم وفيديو تشوفها هنا</div></div>
       </div>
       <div class="cv">
-        <a href="cv/CV_Loqman_Hemici_AR.pdf" download><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span data-i="cv.ar">السيرة الذاتية · عربي</span></a>
-        <a href="cv/CV_Loqman_Hemici_EN.pdf" download><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span data-i="cv.en">السيرة الذاتية · English</span></a>
+        <a href="CV_Loqman_Hemici_AR.pdf" download><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span data-i="cv.ar">السيرة الذاتية · عربي</span></a>
+        <a href="CV_Loqman_Hemici_EN.pdf" download><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span data-i="cv.en">السيرة الذاتية · English</span></a>
       </div>
     </div>
   </div>
@@ -670,7 +670,7 @@ function buildWorks(){
     const sq=p.imgs[cv[0]].r>0.95;
     const a=document.createElement('article');a.className='card glass-l rv';a.dataset.cat=p.cat;a.tabIndex=0;a.setAttribute('role','button');
     a.innerHTML=`${p.personal?`<span class="tag p">${T[L]['card.p']}</span>`:''}<span class="count">${T[L]['card.n'].replace('{n}',`<span class="num">${p.imgs.length}</span>`)}</span>
-    <div class="cover${sq?' sq':''}">${cv.map((k,j)=>`<img class="c${j}" src="assets/thumb/${p.imgs[k].n}.webp" alt="" loading="lazy">`).join('')}</div>
+    <div class="cover${sq?' sq':''}">${cv.map((k,j)=>`<img class="c${j}" src="${p.imgs[k].n}.webp" alt="" loading="lazy">`).join('')}</div>
     <div class="meta"><div><h3>${L==='ar'?p.ar:p.en}</h3><div class="sub">${L==='ar'?p.sar:p.sen}</div></div><span class="go" aria-hidden="true"><span class="arr">→</span></span></div>`;
     a.setAttribute('aria-label',(L==='ar'?p.ar:p.en)+' · '+T[L]['card.open']);
     a.addEventListener('click',()=>openLB(id));
@@ -685,7 +685,7 @@ function applyFilter(anim=true){
 $$('#filters button').forEach(b=>b.addEventListener('click',()=>{$$('#filters button').forEach(x=>x.classList.toggle('act',x===b));filter=b.dataset.f;applyFilter()}));
 
 function buildReels(){
-  $('#reels').innerHTML=REELS.map(r=>`<div class="reel"><div class="phone"><video src="assets/video/${r.v}.mp4" poster="assets/video/${r.v}.webp" muted loop playsinline preload="none"></video>
+  $('#reels').innerHTML=REELS.map(r=>`<div class="reel"><div class="phone"><video src="${r.v}.mp4" poster="${r.v}.webp" muted loop playsinline preload="none"></video>
   <button class="snd" aria-label="${T[L]['mo.snd']}"><svg class="off" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6"/></svg><svg class="on" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg></button></div>
   <div class="cap"><b class="lat">${r.t}</b><span>${r[L]}</span></div></div>`).join('');
   $$('#reels .snd').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();const v=b.parentElement.querySelector('video');
@@ -722,7 +722,7 @@ co.observe($('#stats'));
 let cur=0,curP=null;
 function openLB(id){const p=byId[id];curP=p;cur=0;
   $('#lbT').textContent=L==='ar'?p.ar:p.en;$('#lbS').textContent=(L==='ar'?p.sar:p.sen)+(p.personal?' · '+T[L]['card.p']:'');
-  $('#lbTrack').innerHTML=p.imgs.map((m,i)=>`<figure data-k="${i}"><img src="assets/img/${m.n}.webp" alt="${(L==='ar'?p.ar:p.en)} ${i+1}" loading="${i<3?'eager':'lazy'}" style="aspect-ratio:${m.r}"></figure>`).join('');
+  $('#lbTrack').innerHTML=p.imgs.map((m,i)=>`<figure data-k="${i}"><img src="${m.n}.webp" alt="${(L==='ar'?p.ar:p.en)} ${i+1}" loading="${i<3?'eager':'lazy'}" style="aspect-ratio:${m.r}"></figure>`).join('');
   $('#lbDots').innerHTML=p.imgs.map((m,i)=>`<button aria-label="${i+1}"></button>`).join('');
   $$('#lbDots button').forEach((b,i)=>b.addEventListener('click',()=>go(i)));
   $('#lb').classList.add('open');document.body.style.overflow='hidden';$('#lbTrack').scrollLeft=0;
