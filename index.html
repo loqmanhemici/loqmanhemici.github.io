@@ -281,6 +281,38 @@ html[dir=ltr] .stat .v{justify-content:flex-start}
 .cv a:hover{background:var(--blue);color:#fff}
 .cv svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
+/* ---------- reviews ---------- */
+.reviews{background:radial-gradient(ellipse 60% 50% at 50% 55%,rgba(28,53,240,.55),transparent 75%),var(--navy);color:#fff;overflow:hidden}
+.reviews .b9{width:620px;height:620px;background:#1C35F0;bottom:-260px;inset-inline-start:-180px;opacity:.55}
+.reviews .sec-head{justify-content:center;text-align:center}
+.reviews .lead{margin-inline:auto}
+.rv-stage{position:relative;display:grid;touch-action:pan-y;user-select:none}
+.rv-card{grid-area:1/1;justify-self:center;width:min(760px,100%);border-radius:var(--r-lg);padding:clamp(28px,4.5vw,56px);display:flex;flex-direction:column;
+  box-shadow:0 40px 90px rgba(4,8,40,.45);transition:transform .8s var(--ease),opacity .8s var(--ease)}
+.rv-card[data-pos="0"]{z-index:2}
+.rv-card:not([data-pos="0"]){opacity:.22;cursor:pointer}
+.rv-card[data-pos="hide"]{opacity:0;pointer-events:none}
+.rv-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.rv-q{font-family:'Alexandria',sans-serif;font-weight:800;font-size:clamp(72px,9vw,120px);line-height:.7;height:.55em;color:var(--lime)}
+.rv-stars{display:flex;gap:6px;direction:ltr}.rv-stars svg{width:clamp(20px,2.2vw,26px);height:auto;fill:var(--lime)}
+.rv-card blockquote{margin-top:clamp(18px,2.5vw,28px);font-family:var(--fb);font-weight:600;font-size:clamp(18px,2.2vw,26px);line-height:1.85;flex:1}
+.rv-card blockquote .lens{color:var(--lime);margin-inline:.12em}
+.rv-who{display:flex;align-items:center;gap:16px;margin-top:clamp(24px,3.5vw,40px);padding-top:clamp(18px,2.5vw,26px);border-top:1px solid var(--glass-db)}
+.rv-mono{flex:none;width:56px;height:56px;border-radius:var(--r-sm);background:var(--lime);color:var(--navy);display:grid;place-items:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:22px}
+.rv-who b{display:block;font-family:var(--fh);font-weight:800;font-size:clamp(18px,2vw,22px)}
+.rv-who span{display:block;font-size:14px;color:rgba(255,255,255,.7);margin-top:4px}
+.rv-ctl{display:flex;justify-content:center;align-items:center;gap:22px;margin-top:clamp(32px,4vw,48px)}
+.rv-arr{width:54px;height:54px;border-radius:15px;background:var(--lime);display:grid;place-items:center;transition:transform .3s var(--ease)}
+.rv-arr:hover{transform:translateY(-2px)}
+.rv-arr.ghost{background:transparent;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
+.rv-arr svg{width:22px;height:22px;fill:none;stroke:var(--navy);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.rv-arr.ghost svg{stroke:#fff}
+html[dir=rtl] .rv-arr svg{transform:scaleX(-1)}
+.rv-dots{display:flex;gap:10px;direction:ltr}
+.rv-dots button{width:10px;height:10px;border-radius:10px;background:rgba(255,255,255,.35);transition:width .4s var(--ease),background .4s}
+.rv-dots button[aria-current="true"]{width:34px;background:var(--lime)}
+@media (max-width:700px){.rv-card:not([data-pos="0"]){opacity:0;pointer-events:none}}
+
 /* ---------- contact ---------- */
 .contact{background:var(--blue);color:#fff;overflow:hidden;text-align:center}
 .contact .b8{width:700px;height:700px;background:#4A63FF;top:-300px;left:50%;translate:-50% 0;opacity:.6}
@@ -566,6 +598,26 @@ footer .logo{font-size:18px}
   </div>
 </section>
 
+<!-- REVIEWS -->
+<section class="reviews pad" id="reviews" aria-roledescription="carousel">
+  <div class="blob b9"></div>
+  <div class="wrap" style="position:relative">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow"><i></i><span data-i="rv.eye">آراء العملاء</span></span>
+        <h2 class="h2"><span data-i="rv.t1">ماذا يقول</span> <span class="lens" data-i="rv.w">عملائي</span></h2>
+        <p class="lead" data-i="rv.desc">كلامهم بعد العمل معي، كما كتبوه.</p>
+      </div>
+    </div>
+    <div class="rv-stage rv" id="rvStage" aria-live="polite"></div>
+    <div class="rv-ctl">
+      <button class="rv-arr ghost" data-go="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="rv-dots" id="rvDots"></div>
+      <button class="rv-arr" data-go="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact on-blue pad" id="contact">
   <div class="blob b8"></div>
@@ -626,6 +678,7 @@ ar:{'nav.work':'أعمالي','nav.motion':'موشن','nav.services':'خدمات
 'p1.t':'أسمع','p1.d':'أفهم مشروعك وجمهورك.','p2.t':'أخطط','p2.d':'أحدد الاتجاه والألوان والقوالب.','p3.t':'أصمم','p3.d':'أنفذ وأراجع معك خطوة بخطوة.','p4.t':'أسلّم','p4.d':'ملفات جاهزة للنشر بكل المقاسات.',
 'ab.name':'لقمان حميسي','ab.loc':'البيّض، الجزائر · أعمل عن بُعد','ab.eye':'من أنا','ab.t1':'أنا','ab.w':'لقمان','ab.p1':'مصمم هوية بصرية وسوشيال ميديا وموشن بخبرة 5 سنوات. أشتغل مستقلاً مع عملاء في السعودية وقطر والجزائر.','ab.p2':'يهمني أن يخدم كل تصميم هدفاً واضحاً، وأن تبان الهوية نفسها في كل بوست وستوري وإعلان.',
 'st.y':'سنوات خبرة','st.c':'دول عملت مع عملاء فيها','st.p':'مشاريع في هذا المعرض','st.d':'تصميم وفيديو تشوفها هنا','cv.ar':'السيرة الذاتية · عربي','cv.en':'السيرة الذاتية · English',
+'rv.eye':'آراء العملاء','rv.t1':'ماذا يقول','rv.w':'عملائي','rv.desc':'كلامهم بعد العمل معي، كما كتبوه.',
 'ct.eye':'تواصل','ct.t1':'احكِ لي عن','ct.w':'مشروعك','ct.desc':'أرد عليك بنفسي، وأقترح عليك وش يناسب مشروعك.','ct.btn':'كلمني على واتساب','c.wa':'واتساب','c.em':'البريد','c.ig':'إنستغرام','c.be':'بيهانس',
 'ft.c':'© لقمان حميسي','lb.next':'التالي','title':'لقمان حميسي · LoqaVision'},
 en:{'nav.work':'Work','nav.motion':'Motion','nav.services':'Services','nav.about':'About','nav.contact':'Contact','nav.cta':'Tell me about your project',
@@ -640,6 +693,7 @@ en:{'nav.work':'Work','nav.motion':'Motion','nav.services':'Services','nav.about
 'p1.t':'Listen','p1.d':'I get to know your business and audience.','p2.t':'Plan','p2.d':'Direction, colors and templates.','p3.t':'Design','p3.d':'I build and review with you step by step.','p4.t':'Deliver','p4.d':'Ready-to-post files in every size.',
 'ab.name':'Loqman Hemici','ab.loc':'El Bayadh, Algeria · Remote','ab.eye':'About','ab.t1':"I'm",'ab.w':'Loqman','ab.p1':'A brand identity, social media and motion designer with 5 years of experience. I work independently with clients in Saudi Arabia, Qatar and Algeria.','ab.p2':'I care that every design serves a clear goal, and that the identity looks the same in every post, story and ad.',
 'st.y':'Years of experience','st.c':'Countries with clients','st.p':'Projects in this portfolio','st.d':'Designs & videos shown here','cv.ar':'CV · Arabic','cv.en':'CV · English',
+'rv.eye':'Testimonials','rv.t1':'Kind words from','rv.w':'clients','rv.desc':'Their words after working with me, as they wrote them.',
 'ct.eye':'Contact','ct.t1':'Tell me about your','ct.w':'project','ct.desc':"I reply personally and suggest what fits your project.",'ct.btn':'Message me on WhatsApp','c.wa':'WhatsApp','c.em':'Email','c.ig':'Instagram','c.be':'Behance',
 'ft.c':'© Loqman Hemici','lb.next':'Next','title':'Loqman Hemici · LoqaVision'}
 };
@@ -657,7 +711,7 @@ function applyLang(){
   $$('.me,.arch img').forEach(i=>i.alt=T[L]['ab.name']);
   const msg=L==='ar'?'هلا لقمان، أبي أحكي لك عن مشروعي':"Hi Loqman, I'd like to tell you about my project";
   $$('.wa-link').forEach(a=>a.href=WA+'?text='+encodeURIComponent(msg));
-  buildMarquee();buildWorks();buildReels();
+  buildMarquee();buildWorks();buildReels();buildReviews();
 }
 function buildMarquee(){
   const s=CLIENTS.map(c=>`<span>${c}</span>`).join('');$('#mq').innerHTML=s+s;
@@ -701,6 +755,43 @@ function tilt(el){if(!fine||calm)return;
   el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`perspective(1000px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-6px)`});
   el.addEventListener('mouseleave',()=>{el.style.transform=''});
 }
+
+/* reviews */
+const REVIEWS=[
+ {m:'Q',ar:{q:'بالأمانة تعاملك جدًا <span class="lens">راقٍ</span> وخدوم، وجدًا سلس التواصل. وأحيانًا أطلب منك الخدمة وتكون بوقت متأخر وتلبّيها لي. اشتغلت معي فوق سنة، وبإذن الله بتتم بفريقنا. أنصح بالتعامل معك.',n:'مركز كواليتي',s:'سوشيال ميديا · السعودية'},
+  en:{q:'Honestly, working with you is truly <span class="lens">classy</span> and helpful, and communication is so smooth. Sometimes I ask for work late at night and you still deliver. You have worked with me for over a year, and God willing you will stay on our team. I recommend working with you.',n:'Quality Center',s:'Social Media · Saudi Arabia'}},
+ {m:'O',ar:{q:'تجربتي معك في مشروع أوتينغ كانت <span class="lens">ممتازة</span>، عجبني اهتمامك بالتفاصيل وسرعة الإنجاز والتزامك بالموعد. تعاملك راقٍ وتواصلك واضح وأسعارك مناسبة، وأكيد أنصح بالتعامل معك.',n:'OUTING',s:'تصميم مطبوعات · قطر'},
+  en:{q:'My experience with you on the OUTING project was <span class="lens">excellent</span>. I loved your attention to detail, fast delivery and commitment to deadlines. Classy dealings, clear communication and fair prices. I definitely recommend working with you.',n:'OUTING',s:'Print Design · Qatar'}},
+ {m:'A',ar:{q:'خدمة <span class="lens">احترافية</span>، سرعة في الرد، سلاسة في التعامل. يقترح عليك حلول ونصائح تخدم مشروعك من ناحية التصميم. بالتوفيق أخي، أنصح بالتعامل معه.',n:'أطياب DZ',s:'شعار وهوية · الجزائر'},
+  en:{q:'<span class="lens">Professional</span> service, quick replies and smooth to deal with. He suggests solutions and advice that serve your project&#39;s design. Best of luck, brother. I recommend working with him.',n:'ATYAB DZ',s:'Logo & Identity · Algeria'}}
+];
+let rvI=0,rvTimer=null;
+function buildReviews(){
+  const st=$('#rvStage'),dots=$('#rvDots');if(!st)return;
+  const star='<svg viewBox="0 0 24 24"><path d="M12 1.8l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.5 5.7 21.2l1.5-7.1L1.8 9.2 9 8.4z"/></svg>';
+  st.innerHTML=REVIEWS.map(r=>{const t=r[L];return `<article class="rv-card glass-d" aria-roledescription="slide"><div class="rv-top"><div class="rv-q" aria-hidden="true">“</div><div class="rv-stars" aria-label="5/5">${star.repeat(5)}</div></div><blockquote>${t.q}</blockquote><div class="rv-who"><div class="rv-mono">${r.m}</div><div><b>${t.n}</b><span>${t.s}</span></div></div></article>`}).join('');
+  dots.innerHTML=REVIEWS.map((r,k)=>`<button aria-label="${k+1}"></button>`).join('');
+  [...dots.children].forEach((b,k)=>b.onclick=()=>rvGo(k));
+  [...st.children].forEach((c,k)=>c.addEventListener('click',()=>{if(c.dataset.pos!=='0')rvGo(k)}));
+  $$('.rv-arr').forEach(b=>b.setAttribute('aria-label',b.dataset.go>0?(L==='ar'?'التالي':'Next'):(L==='ar'?'السابق':'Previous')));
+  rvRender();
+}
+function rvRender(){
+  const st=$('#rvStage');if(!st)return;const n=REVIEWS.length,rtl=document.documentElement.dir==='rtl',w=Math.min(st.clientWidth||760,760);
+  [...st.children].forEach((c,k)=>{let d=(k-rvI+n)%n;if(d>n/2)d-=n;
+    c.dataset.pos=Math.abs(d)>1?'hide':String(d);c.setAttribute('aria-hidden',d?'true':'false');
+    c.style.transform=`translateX(${d*w*1.06*(rtl?-1:1)}px) scale(${d?.86:1})`});
+  [...$('#rvDots').children].forEach((b,k)=>b.setAttribute('aria-current',k===rvI));
+}
+function rvGo(k){rvI=(k+REVIEWS.length)%REVIEWS.length;rvRender();rvAuto()}
+function rvAuto(){clearInterval(rvTimer);if(!matchMedia('(prefers-reduced-motion:reduce)').matches)rvTimer=setInterval(()=>rvGo(rvI+1),6000)}
+$$('.rv-arr').forEach(b=>b.addEventListener('click',()=>rvGo(rvI+(+b.dataset.go))));
+(()=>{const sec=$('#reviews'),st=$('#rvStage');if(!sec)return;let sx=null;
+  sec.addEventListener('mouseenter',()=>clearInterval(rvTimer));sec.addEventListener('mouseleave',rvAuto);
+  st.addEventListener('pointerdown',e=>sx=e.clientX);
+  st.addEventListener('pointerup',e=>{if(sx===null)return;const dx=e.clientX-sx;sx=null;if(Math.abs(dx)<40)return;
+    const rtl=document.documentElement.dir==='rtl';rvGo(rvI+((dx<0)!==rtl?1:-1))});
+  addEventListener('resize',rvRender);rvAuto()})();
 
 /* reveal */
 let io;
